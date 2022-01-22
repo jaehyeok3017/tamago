@@ -21,6 +21,9 @@ class MainActivity : AppCompatActivity() {
         resetButton = findViewById(R.id.reset)
         text = findViewById(R.id.number)
 
+        imageButton.setImageResource(R.drawable.egg)
+        text.text = number.toString()
+
         imageButton.setOnClickListener{
             number = numberCheck(number)
             text.text = number.toString()
@@ -53,6 +56,7 @@ class MainActivity : AppCompatActivity() {
 
         else if(number == 0){
             imageButton.setImageResource(R.drawable.aa)
+            return number
         }
 
         return number - 1
